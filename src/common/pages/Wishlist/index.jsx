@@ -46,9 +46,9 @@ const WishList = (props) => {
 
 
   useEffect(() => {
-    const savedItem = JSON.parse(localStorage.getItem("wishListArray") || []);
-    setWishList(savedItem);
-  }, []);
+    const savedItem = localStorage.getItem("wishListArray");
+    setWishList(savedItem ? JSON.parse(savedItem) : []);
+}, []);
 
   const isExist = (productId) => {
     const existProduct = basket?.find((product) => product.id === productId);
@@ -65,9 +65,9 @@ const WishList = (props) => {
 
   return (
     <div className="h-screen">
-      {sortedProduct.length > 0 ? (
+      {sortedProduct?.length > 0 ? (
         <div className="py-5  px-5 md:px-12 grid gap-x-16 gap-y-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {sortedProduct.map((product, index) => (
+          {sortedProduct?.map((product, index) => (
             <div className="bg-gray-800 text-gray-200 rounded-xl" key={index}>
               <img
                 className="w-full mb-2 h-60 object-cover"
