@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Home, Products, NotFound, Basket, Wishlist,Detail } from './common/pages';
+import { Home, Products, NotFound, Basket, WishList,Detail } from './common/pages';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './common/components/Navbar';
 import { ROUTER } from './constant/router';
@@ -102,7 +102,7 @@ function App() {
           SortedProducts={SortedProducts}
           sortOption={sortOption}
         />} />
-        <Route path={ROUTER.Wishlist} element={<Wishlist
+        <Route path={ROUTER.Wishlist} element={<WishList
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           wishList={wishList}
