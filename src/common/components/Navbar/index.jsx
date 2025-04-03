@@ -23,8 +23,8 @@ const Navbar = (props) => {
             className="px-3 py-2 rounded-lg bg-gray-700 text-gray-300 "
           >
             <option value="">Sort by</option>
-            <option value="az">A-Z</option>
-            <option value="za">Z-A</option>
+            <option value="a-z">A-Z</option>
+            <option value="z-a">Z-A</option>
             <option value="low-high">Price: Low to High</option>
             <option value="high-low">Price: High to Low</option>
           </select>

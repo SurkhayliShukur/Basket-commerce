@@ -28,15 +28,17 @@ function App() {
 
   const SortedProducts = (arr) => {
     let sortedProducts = [...arr];
+  
     if (sortOption === "a-z") {
-      sortedProducts.sort((a, b) => a.title.localeCompare(b.title));
+      sortedProducts.sort((a, b) => (a.title).localeCompare(b.title));
     } else if (sortOption === "z-a") {
-      sortedProducts.sort((b, a) => b.title.localeCompare(a.title));
+      sortedProducts.sort((a, b) => (b.title).localeCompare(a.title));
     } else if (sortOption === "low-high") {
       sortedProducts.sort((a, b) => a.price - b.price);
     } else if (sortOption === "high-low") {
       sortedProducts.sort((a, b) => b.price - a.price);
     }
+  
     return sortedProducts;
   };
 
