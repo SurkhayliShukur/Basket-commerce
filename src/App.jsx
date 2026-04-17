@@ -24,7 +24,8 @@ function App() {
     setSortOption,
   } = useAppState();
 
-  console.log('sagol');
+  console.log('newBranch');
+
 
   const SortedProducts = (arr) => {
     let sortedProducts = [...arr];
