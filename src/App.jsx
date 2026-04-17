@@ -24,7 +24,7 @@ function App() {
     setSortOption,
   } = useAppState();
 
-
+  console.log('Salam');
 
   const SortedProducts = (arr) => {
     let sortedProducts = [...arr];
